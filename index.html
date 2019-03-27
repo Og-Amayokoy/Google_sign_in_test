@@ -1,50 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DPCTYPE html>
+<html>
   <head>
-    <script src="https://apis.google.com/js/platform.js" async defer></script>
-    <meta name="google-signin-client_id" content="449486463481-1ac9bh5afvd1t6q8u5iuekiltvhobrsg.apps.googleusercontent.com">
-    <script type="text/javascript"> 
-    function onSignIn(googleUser) {
-  var profile = googleUser.getBasicProfile();
-  console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
-  console.log('Name: ' + profile.getName());
-  console.log('Image URL: ' + profile.getImageUrl());
-  console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
-}   
-    </script>
-    <meta name="google-site-verification" content="ltTomVbemsUexls9AXX9-PHPir3BUPDrkMl-p9GkY0Q" />
-    <meta name="google-signin-scope" content="profile email">
-    <meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
-    <script src="https://apis.google.com/js/platform.js" async defer></script>
-  
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
+  <meta name="google-signin-client_id" content="449486463481-1ac9bh5afvd1t6q8u5iuekiltvhobrsg.apps.googleusercontent.com.apps.googleusercontent.com">
   </head>
   <body>
-    
-    
-    <h1>Google Sign In test</h1>
-   <!--
-    <div class="g-signin2" data-onsuccess="onSignIn"></div>
-    -->
-    
-    <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
-    <script>
-      function onSignIn(googleUser) {
-        // Useful data for your client-side scripts:
-        var profile = googleUser.getBasicProfile();
-        console.log("ID: " + profile.getId()); // Don't send this directly to your server!
-        console.log('Full Name: ' + profile.getName());
-        console.log('Given Name: ' + profile.getGivenName());
-        console.log('Family Name: ' + profile.getFamilyName());
-        console.log("Image URL: " + profile.getImageUrl());
-        console.log("Email: " + profile.getEmail());
+ <div class="g-signin2" data-onsuccess="onSignIn"></div><!--Sign in bottom-->
 
-        // The ID token you need to pass to your backend:
-        var id_token = googleUser.getAuthResponse().id_token;
-        console.log("ID Token: " + id_token);
-      }
-    </script>
-    
-    
+    <div> <!--Sign out-->
     <a href="#" onclick="signOut();">Sign out</a>
 <script>
   function signOut() {
@@ -54,9 +17,6 @@
     });
   }
 </script>
-    
-    
-    
-    <a href="./few_code.html">Another test.</a>
+    </div>
   </body>
 </html>
